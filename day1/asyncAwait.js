@@ -8,11 +8,16 @@ const createPizzaDough = () => {
 }
 
 const addIngredients = () => {
+  // let addedIngredients = false; // comment this out to test try catch
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log("Added Tomattoe Sauce, mozzarella, Pinapples and Pepperoni");
-      resolve();
-    }, 2000)
+    if (addedIngredients) {
+      setTimeout(() => {
+        console.log("Added Tomattoe Sauce, mozzarella, Pinapples and Pepperoni");
+        resolve();
+      }, 2000)
+    } else {
+      reject("Couldn't add ingredients")
+    }
   })
 }
 
