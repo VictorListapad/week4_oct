@@ -30,7 +30,7 @@ const bakeThePizza = () => {
   })
 }
 
-async function makePizza() {
+function makePizza() {
   createPizzaDough()
     .then(() => addIngredients())
     .then(() => bakeThePizza())
