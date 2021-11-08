@@ -10,7 +10,7 @@ let cementAdded = false;
 let finishesDone = false;
 
 const planning = () => {
-  // planningDone = true;
+  planningDone = true; // comment this to see how .catch works
   return new Promise((resolve, reject) => {
     if (!planningDone) {
       reject("Planning is not done")
@@ -62,4 +62,7 @@ planning()
   .then(() => cement())
   .then(() => finishes())
   .catch((error) => console.log(error))
+  .finally(() => {
+    console.log("Finished buidling the house")
+  })
 
