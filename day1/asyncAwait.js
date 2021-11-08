@@ -8,7 +8,7 @@ const createPizzaDough = () => {
 }
 
 const addIngredients = () => {
-  // let addedIngredients = false; // comment this out to test try catch
+  let addedIngredients = true; // comment this out to test try catch
   return new Promise((resolve, reject) => {
     if (addedIngredients) {
       setTimeout(() => {
@@ -24,9 +24,9 @@ const addIngredients = () => {
 const bakeThePizza = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log("Finished baking the pizza");
-      resolve();
-    }, 1000)
+      // console.log("Finished baking the pizza");
+      resolve("Finished baking the pizza");
+    }, 3000)
   })
 }
 
@@ -39,10 +39,13 @@ async function makePizza() {
 }
 
 const makePizzaAsync = async () => {
+
   try {
     await createPizzaDough();
     await addIngredients();
-    await bakeThePizza();
+    const baked = await bakeThePizza();
+    console.log("meanwhile it bakes")
+    console.log(baked);
     console.log("Pizza is ready");
   } catch (error) {
     console.log(error);
