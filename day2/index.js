@@ -27,3 +27,8 @@ const port = 3000;
 app.listen(port, () => {
   console.log("Server running")
 })
+
+// Kalju, Pablo
+// Victor, Paola
+// Katherine, Laz, Chris
+// Sylvia, Eddie
