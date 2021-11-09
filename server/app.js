@@ -12,9 +12,14 @@ app.get("/", (req, res) => {
   return res.sendFile(__dirname + '/views/index.html')
 })
 
-app.get('/about', (req, res) => {
-  return res.sendFile(__dirname + '/views/about.html')
+//                 req, res
+app.get('/about', (dog, cat) => {
+  return cat.sendFile(__dirname + '/views/about.html')
 });
+
+app.get('/contact', (req, res) => {
+  return res.sendFile(__dirname + '/views/contact.html')
+})
 
 // app.get("/about", (req, res) => {
 //   return res.send(`
@@ -41,3 +46,7 @@ app.listen(port, () => {
   console.log("Server running...⚡")
 })
 
+// 
+//
+//
+//
