@@ -1,0 +1,38 @@
+[
+  {
+    "name":"Ironman",
+    "superpower": "Millionaire, playboy, genius, philanthropist",
+    "suit": "Metal Suit",
+    "age": 45
+  },
+  {
+    "name":"Thor",
+    "superpower":"Thunder",
+    "suit": "metal suit",
+    "age": 800
+  }, 
+  {
+    "name": "Hulk",
+    "superpower": "smash",
+    "suit": "purple shorts",
+    "age": 38
+  },
+  {
+    "name": "Doctor Strage",
+    "superpower": "Magic",
+    "suit": "Red cape",
+    "age": 45
+  },
+  {
+    "name":"Gene Gray (Phoenix)",
+    "superpower": "psychic",
+    "suit": "black leather coat & suit",
+    "age": 28
+  },
+  {
+    "name": "Cptn. Marvel",
+    "superpower": "extraterrestrial super powers",
+    "suit":"Blue red and golden",
+    "age": 32
+  }
+]
