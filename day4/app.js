@@ -1,7 +1,8 @@
 // imports
 const express = require('express');
 const mongoose = require('mongoose');
-const SuperHero = require('./models/SuperHero');
+
+
 const app = express();
 
 // connect to db
@@ -10,21 +11,18 @@ mongoose.connect("mongodb://localhost/marvel")
   .catch(() => console.log("Not so fast Mr. Anderson...❌"));
 
 // middlwares
+app.use(express.json());
 
-// CRUD
-// Create Read Update Delete
+// -------------- NOTES ---------------
+// MVC => Model, View, Controller
+//          |       |       |
+//        Schemas   |       route
+//                  |
+//                 HTML/ -> Reacts
 
 // routes
-app.get("/", async (req, res) => {
-  const superheroes = await SuperHero.find();
-  try {
-    res.json({data: superheroes})
-  } catch (error) {
-    res.json({error: error});
-  }
-});
-
-
+app.use("/api/heros", require('./routes/superhero'));
+app.use("/api/villains", require("./routes/villain"));
 
 // port & listent to clients
 const port = 5000;
