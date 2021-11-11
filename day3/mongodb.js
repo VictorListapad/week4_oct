@@ -16,7 +16,7 @@ db.superheros
   .pretty();
 
 // sort by age asc
-db.superheros.find().sort({ age: 1 }).pretty();
+db.superheros.find().sort({ age: 1 }).limit(3).skip(3).pretty();
 
 // insert a document
 db.superheros.insert({
@@ -48,3 +48,4 @@ db.superheros.updateOne(
 
 db.superheros.deleteOne({_id: ObjectId("618bfe23e613497e9d335568")})
 
+db.companies.find()
